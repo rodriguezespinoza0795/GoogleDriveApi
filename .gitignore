@@ -1,3 +1,8 @@
+# drive API
+credentials.json
+storage.json
+token.json
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
