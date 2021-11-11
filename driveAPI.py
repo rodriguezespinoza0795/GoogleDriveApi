@@ -86,4 +86,8 @@ def get_recordings(service, sub_folders, date):
     for folder in sub_folders:
         recordings = search_recordings(service, folder["id"], date)
         all_recordings += recordings
+    for recording in all_recordings:
+        recording["owners"] = recording["owners"][0]['emailAddress']
+        recording["videoMediaMetadata"] = recording["videoMediaMetadata"]["durationMillis"] if "videoMediaMetadata" in recording else 0
     return all_recordings
+
